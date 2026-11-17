@@ -162,7 +162,9 @@ section.block { padding-block: 88px 0; }
 .demo h3 { font-size: 1.375rem; margin-bottom: 8px; }
 .demo p { color: var(--muted); margin-bottom: 16px; }
 .demo .topic { display: block; font: italic 500 1.25rem/1.4 var(--display); color: var(--crimson); margin-bottom: 4px; }
-.demo video { display: block; width: 100%; max-width: 46rem; border-radius: var(--radius); background: #000; }
+.demo .video-frame { width: 100%; max-width: 46rem; aspect-ratio: 1668 / 1080; border-radius: var(--radius); overflow: hidden; background: #000; }
+.demo .video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.demo .video-link { margin: 10px 0 0; font-size: 0.875rem; }
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 
 /* course dossier */
@@ -460,10 +462,10 @@ footer { padding-block: 24px; font-size: 0.8125rem; color: var(--muted); }
       <div class="demo" id="demo">
         <h3>Teaching demonstration</h3>
         <p><b class="topic">Topic: Teaching Efficiently</b>A 10-minute lesson on how to mix lecture with active learning to keep students engaged.</p>
-        <video controls playsinline preload="metadata">
-          <source src="media/teaching-demo.mp4" type="video/mp4">
-          <a href="media/teaching-demo.mp4">Download the teaching demonstration video</a>
-        </video>
+        <div class="video-frame">
+          <iframe src="https://drive.google.com/file/d/1sXBrTT27TwFgssx-ubBH6Z1byGN9Ydem/preview" title="Teaching demonstration video: Teaching Efficiently" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="video-link"><a href="https://drive.google.com/file/d/1sXBrTT27TwFgssx-ubBH6Z1byGN9Ydem/view" target="_blank" rel="noopener">Open the video in Google Drive</a></p>
       </div>
 
       <div class="two" style="margin-top: 48px;">
